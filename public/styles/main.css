@@ -35,13 +35,13 @@ main{
 }
 .card {
   width: 300px;
-  height: 240px;
+  height: 220px;
   background: white;
   padding: .4em;
   border-radius: 6px;
 }
 
-button {
+.card button {
   --primary-color: #0c666f;
   --secondary-color: #fff;
   --hover-color: #89cbce;
@@ -59,15 +59,16 @@ button {
   align-items: center;
   gap: 0.6em;
   font-weight: bold;
+  width: 60%;
 }
 
-button .arrow-wrapper {
+.card button .arrow-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-button .arrow {
+.card button .arrow {
   margin-top: 1px;
   width: var(--arrow-width);
   background: var(--primary-color);
@@ -76,7 +77,7 @@ button .arrow {
   transition: 0.2s;
 }
 
-button .arrow::before {
+.card button .arrow::before {
   content: "";
   box-sizing: border-box;
   position: absolute;
@@ -90,15 +91,15 @@ button .arrow::before {
   transform: rotate(-45deg);
 }
 
-button:hover {
+.card button:hover {
   background-color: var(--hover-color);
 }
 
-button:hover .arrow {
+.card button:hover .arrow {
   background: var(--secondary-color);
 }
 
-button:hover .arrow:before {
+.card button:hover .arrow:before {
   right: 0;
 }
 
@@ -138,3 +139,50 @@ button:hover .arrow:before {
 .name:hover {
   cursor: pointer;
 }
+
+.description{
+  display: flex;
+  padding: 10%;
+  padding-top: 15%;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img{
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+ .profile-img img{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  opacity: 1;
+ }
+ .about{
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  text-align: center;
+ }
+
+ .content{
+  height: 100vh;
+  width: 100%;
+  padding: 5%;
+  padding-top: 10%;
+ }
+
+ .content h1{
+  padding-left:20px;
+  color: #fff;
+ }
+ .content .top-blogs{
+  margin-top: 0%;
+ }
