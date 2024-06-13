@@ -61,26 +61,28 @@
       </nav>
     </header>
     <h1>Your Blogs..</h1>
-    <% if(locals.blogs){ %>
-      <% blogs.forEach((blog)=>{ %>
-        <div class="blog1">
-          <div class="card">
-            <div class="category"><%= blog.title %></div>
-            <div class="heading"> <%= blog.description %>
-              
-                <div class="author"> By <span class="name"><%= blog.author %></span></div>
-            </div>
-            <button>
-              Read More
-              <div class="arrow-wrapper">
-                  <div class="arrow"></div>
-          
+    <div class="top-blogs">
+      <% if(locals.blogs){ %>
+        <% blogs.forEach((blog)=>{ %>
+          <div class="blog1">
+            <div class="card">
+              <div class="category"><%= blog.title %></div>
+              <div class="heading"> <%= blog.description %>
+                
+                  <div class="author"> By <span class="name"><%= blog.author %></span>    <%=blog.date  %></div>
               </div>
-            </button>
-    
+              <button>
+                Read More
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+            
+                </div>
+              </button>
+      
+            </div>
           </div>
-        </div>
-        <% })}; %>
+          <% })}; %>
+    </div>
   </div>
 
 
